@@ -1,0 +1,25 @@
+/*
+    This file contains must of the functions from the 
+    ClownShell+ version 1.0.0 created on the 2024 by 
+    MBV
+*/
+
+//Defines the function that set the variable
+DefineVariable(@variable,@isConstant)
+{
+    ClownShell.Stack.Define(@variable,@isConstant)
+}
+
+dirs(@path,@list)
+{
+    ClownShell.GetDirectories(@path,@list);
+}
+
+ExitConditionMeet()
+{
+    if(ClownShell.IsExitRequest)
+    {
+    	var exit = true
+        return @exit 
+    }
+}

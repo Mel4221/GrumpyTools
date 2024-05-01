@@ -1,0 +1,3 @@
+/home/mel/Documents/C++/GrumpyShell/build/CMakeFiles/rebuild_cache.dir
+/home/mel/Documents/C++/GrumpyShell/build/CMakeFiles/edit_cache.dir
+/home/mel/Documents/C++/GrumpyShell/build/CMakeFiles/GrumpyShell.dir

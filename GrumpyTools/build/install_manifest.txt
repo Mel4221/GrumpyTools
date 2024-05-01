@@ -1,0 +1,12 @@
+/usr/local/lib/libGrumpyTools.so
+/usr/local/include/IO/Reader.hpp
+/usr/local/include/IO/FileInfo.hpp
+/usr/local/include/Core/Get.hpp
+/usr/local/include/Core/IRandom.hpp
+/usr/local/include/Data/Key.hpp
+/usr/local/include/Data/QKey.hpp
+/usr/local/include/Data/QKey_ParseValuePairs.cpp
+/usr/local/lib/cmake/GrumpyTools/GrumpyToolsTargets.cmake
+/usr/local/lib/cmake/GrumpyTools/GrumpyToolsTargets-noconfig.cmake
+/usr/local/lib/cmake/GrumpyTools/GrumpyToolsConfig.cmake
+/usr/local/lib/cmake/GrumpyTools/GrumpyToolsConfigVersion.cmake

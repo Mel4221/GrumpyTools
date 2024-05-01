@@ -1,0 +1,5 @@
+do
+{
+   ClownShell.Run.Command(input)
+}
+while(ExitConditionMeet() != exit)

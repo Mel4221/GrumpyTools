@@ -1,0 +1,2 @@
+ls ClownShell.Directory.CurrentPath()
+clear ClownShell.Console.Clear()

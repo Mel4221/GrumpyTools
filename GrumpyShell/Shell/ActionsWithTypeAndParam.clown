@@ -1,0 +1,10 @@
+ls @type @path
+{
+    var dirsList
+    dirs(@path,dirsList)
+}
+
+print @[]
+{
+    foreach(@[],print)
+}

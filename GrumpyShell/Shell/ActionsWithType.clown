@@ -1,0 +1,22 @@
+ls @path
+{
+    print @path
+}
+
+print ||
+echo  ||
+log @type
+{
+    PrintType() @type
+}
+
+var ||
+set @variable
+{
+    DefineVariable() @variable false
+}
+
+const @variable
+{
+    DefineVariable() @variable true
+}

@@ -1,0 +1,70 @@
+#include <iostream>
+
+// Define some ANSI escape codes for color
+#ifdef _WIN32
+#include <windows.h>
+#define ANSI_COLOR_RED     ""
+#define ANSI_COLOR_GREEN   ""
+#define ANSI_COLOR_YELLOW  ""
+#define ANSI_COLOR_BLUE    ""
+#define ANSI_COLOR_MAGENTA ""
+#define ANSI_COLOR_CYAN    ""
+#define ANSI_COLOR_RESET   ""
+#else
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+#endif
+
+class ConsolePrinter {
+public:
+    // Print text with specified color
+    static void Print(const std::string& color, const std::string& text) {
+        std::string colorCode;
+        switch (hashStr(color.c_str())) {
+            case hashStr("red"):
+                colorCode = ANSI_COLOR_RED;
+                break;
+            case hashStr("green"):
+                colorCode = ANSI_COLOR_GREEN;
+                break;
+            case hashStr("yellow"):
+                colorCode = ANSI_COLOR_YELLOW;
+                break;
+            case hashStr("blue"):
+                colorCode = ANSI_COLOR_BLUE;
+                break;
+            case hashStr("magenta"):
+                colorCode = ANSI_COLOR_MAGENTA;
+                break;
+            case hashStr("cyan"):
+                colorCode = ANSI_COLOR_CYAN;
+                break;
+            default:
+                colorCode = ANSI_COLOR_RESET;
+        }
+
+        std::cout << colorCode << text << ANSI_COLOR_RESET << std::endl;
+    }
+
+private:
+    static constexpr unsigned int hashStr(const char* str) {
+        unsigned int hash = 5381;
+        int c;
+
+        while ((c = *str++)) {
+            hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+        }
+
+        return hash;
+    }
+};
+
+int main() {
+    ConsolePrinter::Print("blue", "Hello, world!");
+    return 0;
+}

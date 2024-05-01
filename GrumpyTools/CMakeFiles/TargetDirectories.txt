@@ -1,0 +1,7 @@
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/install/strip.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/install/local.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/install.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/list_install_components.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/rebuild_cache.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/edit_cache.dir
+/home/mel/Documents/C++/GrumpyTools/CMakeFiles/GrumpyTools.dir

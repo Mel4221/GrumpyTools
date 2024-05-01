@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(GrumpyTools VERSION 1.0.2)
+
+# Adding the files recursively to a variable as a list
+file(GLOB_RECURSE GrumpyTools_SRC_FILES src/*.cpp)
+
+# This adds the library with all the files that it requires
+add_library(GrumpyTools SHARED ${GrumpyTools_SRC_FILES})
+
+# This includes the header files
+target_include_directories(GrumpyTools
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+# Install library and headers
+install(TARGETS GrumpyTools
+        EXPORT GrumpyToolsTargets
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION include)
+
+# Install header files
+install(DIRECTORY include/ DESTINATION include)
+
+# Install CMake configuration files
+install(EXPORT GrumpyToolsTargets
+        FILE GrumpyToolsTargets.cmake
+        NAMESPACE GrumpyTools::
+        DESTINATION lib/cmake/GrumpyTools)
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file("GrumpyToolsConfigVersion.cmake"
+        VERSION ${PROJECT_VERSION}
+        COMPATIBILITY SameMajorVersion)
+
+configure_package_config_file("${CMAKE_CURRENT_LIST_DIR}/cmake/GrumpyToolsConfig.cmake.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/GrumpyToolsConfig.cmake"
+        INSTALL_DESTINATION "lib/cmake/GrumpyTools")
+
+# Include the directory containing GrumpyToolsConfig.cmake.in
+target_include_directories(GrumpyTools INTERFACE "$<INSTALL_PREFIX>/include")
+
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/GrumpyToolsConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/GrumpyToolsConfigVersion.cmake"
+        DESTINATION "lib/cmake/GrumpyTools")

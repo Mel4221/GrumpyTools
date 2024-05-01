@@ -1,0 +1,13 @@
+//run a backup of all files
+
+//creatting a list of files
+list files[] = files(/home/Documents/)
+
+//a function to call every time we loop
+function move(file)
+{
+    qsync /media/mel/BLACK/Documents/
+}
+
+//looping through all the files
+foreach file in files[] move
