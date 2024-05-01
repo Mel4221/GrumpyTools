@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GrumpyShell.dir/src/main.cpp.o"
+  "CMakeFiles/GrumpyShell.dir/src/Init/main.cpp.o"
   "GrumpyShell"
   "GrumpyShell.pdb"
 )

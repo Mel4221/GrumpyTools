@@ -63,10 +63,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mel/Documents/C++/GrumpyShell
+CMAKE_SOURCE_DIR = /home/mel/Documents/C++/GrumpyTools/GrumpyShell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mel/Documents/C++/GrumpyShell/build
+CMAKE_BINARY_DIR = /home/mel/Documents/C++/GrumpyTools/GrumpyShell/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/GrumpyShell.dir/clean
 CMakeFiles/GrumpyShell.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GrumpyShell.dir/build.make CMakeFiles/GrumpyShell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GrumpyShell.dir/build.make CMakeFiles/GrumpyShell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mel/Documents/C++/GrumpyShell/build/CMakeFiles --progress-num=1,2 "Built target GrumpyShell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mel/Documents/C++/GrumpyTools/GrumpyShell/build/CMakeFiles --progress-num=1,2 "Built target GrumpyShell"
 .PHONY : CMakeFiles/GrumpyShell.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GrumpyShell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mel/Documents/C++/GrumpyShell/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mel/Documents/C++/GrumpyTools/GrumpyShell/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GrumpyShell.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mel/Documents/C++/GrumpyShell/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mel/Documents/C++/GrumpyTools/GrumpyShell/build/CMakeFiles 0
 .PHONY : CMakeFiles/GrumpyShell.dir/rule
 
 # Convenience name for target.

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mel/Documents/C++/GrumpyShell/src/main.cpp
+/home/mel/Documents/C++/GrumpyTools/GrumpyShell/src/Init/main.cpp
 iostream
 -
 string
